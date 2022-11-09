@@ -80,7 +80,7 @@ public class ConversaoTemperatura {
 					
 					System.out.println("");
 					System.out.printf(temperaturaAtual[x] + " °Fahrenheit é igual a %.1f", temperaturaTransformada[x]);
-					System.out.print(" °Kelvin\n");
+					System.out.print(" °Celsius\n");
 				}
 				
 				System.out.printf("\nA média das temperaturas digitadas é %.1f",media);
@@ -109,8 +109,8 @@ public class ConversaoTemperatura {
 				for (int x = 0; x < temperaturaAtual.length; x++) {
 					
 					System.out.println("");
-					System.out.printf(temperaturaAtual[x] + " °Fahrenheit é igual a %.1f", temperaturaTransformada[x]);
-					System.out.print(" °Kelvin\n");
+					System.out.printf(temperaturaAtual[x] + " °Kelvin é igual a %.1f", temperaturaTransformada[x]);
+					System.out.print(" °Fahrenheit\n");
 				}
 				
 				System.out.printf("\nA média das temperaturas digitadas é %.1f",media);
@@ -139,8 +139,8 @@ public class ConversaoTemperatura {
 				for (int x = 0; x < temperaturaAtual.length; x++) {
 					
 					System.out.println("");
-					System.out.printf(temperaturaAtual[x] + " °Fahrenheit é igual a %.1f", temperaturaTransformada[x]);
-					System.out.print(" °Kelvin\n");
+					System.out.printf(temperaturaAtual[x] + " °Kelvin é igual a %.1f", temperaturaTransformada[x]);
+					System.out.print(" °Celsius\n");
 				}
 				
 				System.out.printf("\nA média das temperaturas digitadas é %.1f",media);
@@ -169,8 +169,8 @@ public class ConversaoTemperatura {
 				for (int x = 0; x < temperaturaAtual.length; x++) {
 					
 					System.out.println("");
-					System.out.printf(temperaturaAtual[x] + " °Fahrenheit é igual a %.1f", temperaturaTransformada[x]);
-					System.out.print(" °Kelvin\n");
+					System.out.printf(temperaturaAtual[x] + " °Celsius é igual a %.1f", temperaturaTransformada[x]);
+					System.out.print(" °Farenheit\n");
 				}
 				
 				System.out.printf("\nA média das temperaturas digitadas é %.1f",media);
@@ -199,7 +199,7 @@ public class ConversaoTemperatura {
 				for (int x = 0; x < temperaturaAtual.length; x++) {
 					
 					System.out.println("");
-					System.out.printf(temperaturaAtual[x] + " °Fahrenheit é igual a %.1f", temperaturaTransformada[x]);
+					System.out.printf(temperaturaAtual[x] + " °Celsius é igual a %.1f", temperaturaTransformada[x]);
 					System.out.print(" °Kelvin\n");
 				}
 				
