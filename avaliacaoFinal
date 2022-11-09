@@ -1,0 +1,222 @@
+package com.ada.avaliacao;
+
+
+import java.util.Scanner;
+
+public class ConversaoTemperatura {
+
+	public static void main(String[] args) {
+		Scanner leia = new Scanner(System.in);
+		int quantidade, temperatura;
+		double somaMedia = 0, somaMediaTransformada =0, media, mediaTransformada;
+
+		System.out.println("_________________________________________________________");
+		System.out.println("              | COVERSÃO DE TEMPERATURA |                ");
+		System.out.println("------------------------¨¨¨¨¨¨¨¨-------------------------");
+		System.out.println("¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨");
+
+		System.out.print("Olá. Digite a quantidade de temperaturas que deseja transformar: ");
+		quantidade = leia.nextInt();
+
+		double temperaturaAtual[] = new double[quantidade];
+		double temperaturaTransformada[] = new double[quantidade];
+
+		do {
+			System.out.println("\nA seguir digite o número da conversão desejada\n" + "1 - Fahrenheit para Kelvin\n"
+					+ "2 - Fahrenheit para Celsius\n" + "3 - Kelvin para Fahrenheit\n" + "4 - Kelvin para Celsius\n"
+					+ "5 - Celsius para Fahrenheit\n" + "6 - Celsius para Kelvin\n\n" + "Digite a sua opção: ");
+			temperatura = leia.nextInt();
+
+			// Transformar Fahrenheit em Kelvin
+
+			switch (temperatura) {
+			case 1:
+				for (int x = 0; x < quantidade; x++) {
+
+					System.out.print("\nDigite a " + (x + 1) + "ª temperatura: ");
+					temperaturaAtual[x] = leia.nextDouble();
+					somaMedia += temperaturaAtual[x];
+
+				}
+				media = somaMedia / temperaturaAtual.length;
+				for (int x = 0; x < temperaturaAtual.length; x++) {
+					temperaturaTransformada[x] = (temperaturaAtual[x] + 459.67) * 5 / 9;
+					
+						somaMediaTransformada += temperaturaTransformada[x];
+
+				}
+				
+				mediaTransformada = somaMediaTransformada/temperaturaTransformada.length;
+				for (int x = 0; x < temperaturaAtual.length; x++) {
+					
+					System.out.println("");
+					System.out.printf(temperaturaAtual[x] + " °Fahrenheit é igual a %.1f", temperaturaTransformada[x]);
+					System.out.print(" °Kelvin\n");
+				}
+				
+				System.out.printf("\nA média das temperaturas digitadas é %.1f",media);
+				System.out.printf("\n\nA média das temperaturas transformadas é %.1f ",mediaTransformada);
+				break;
+
+			// Transformar Fahrenheit em Celsius
+			case 2:
+				for (int x = 0; x < quantidade; x++) {
+
+					System.out.print("\nDigite a " + (x + 1) + "ª temperatura: ");
+					temperaturaAtual[x] = leia.nextDouble();
+					somaMedia += temperaturaAtual[x];
+
+				}
+				media = somaMedia / temperaturaAtual.length;
+				for (int x = 0; x < temperaturaAtual.length; x++) {
+					temperaturaTransformada[x] = (temperaturaAtual[x] - 32) / 1.8;
+					
+						somaMediaTransformada += temperaturaTransformada[x];
+
+				}
+				
+				mediaTransformada = somaMediaTransformada/temperaturaTransformada.length;
+				for (int x = 0; x < temperaturaAtual.length; x++) {
+					
+					System.out.println("");
+					System.out.printf(temperaturaAtual[x] + " °Fahrenheit é igual a %.1f", temperaturaTransformada[x]);
+					System.out.print(" °Kelvin\n");
+				}
+				
+				System.out.printf("\nA média das temperaturas digitadas é %.1f",media);
+				System.out.printf("\n\nA média das temperaturas transformadas é %.1f ",mediaTransformada);
+				break;
+
+				
+			// Transformar Kelvin em Fahrenheit
+			case 3:
+				for (int x = 0; x < quantidade; x++) {
+
+					System.out.print("\nDigite a " + (x + 1) + "ª temperatura: ");
+					temperaturaAtual[x] = leia.nextDouble();
+					somaMedia += temperaturaAtual[x];
+
+				}
+				media = somaMedia / temperaturaAtual.length;
+				for (int x = 0; x < temperaturaAtual.length; x++) {
+					temperaturaTransformada[x] = (temperaturaAtual[x] - 273) * 1.8 + 32;
+					
+						somaMediaTransformada += temperaturaTransformada[x];
+
+				}
+				
+				mediaTransformada = somaMediaTransformada/temperaturaTransformada.length;
+				for (int x = 0; x < temperaturaAtual.length; x++) {
+					
+					System.out.println("");
+					System.out.printf(temperaturaAtual[x] + " °Fahrenheit é igual a %.1f", temperaturaTransformada[x]);
+					System.out.print(" °Kelvin\n");
+				}
+				
+				System.out.printf("\nA média das temperaturas digitadas é %.1f",media);
+				System.out.printf("\n\nA média das temperaturas transformadas é %.1f ",mediaTransformada);
+				break;
+				
+
+				// Transformar Kelvin em Celsius
+			case 4:
+				for (int x = 0; x < quantidade; x++) {
+
+					System.out.print("\nDigite a " + (x + 1) + "ª temperatura: ");
+					temperaturaAtual[x] = leia.nextDouble();
+					somaMedia += temperaturaAtual[x];
+
+				}
+				media = somaMedia / temperaturaAtual.length;
+				for (int x = 0; x < temperaturaAtual.length; x++) {
+					temperaturaTransformada[x] = (temperaturaAtual[x] - 273);
+					
+						somaMediaTransformada += temperaturaTransformada[x];
+
+				}
+				
+				mediaTransformada = somaMediaTransformada/temperaturaTransformada.length;
+				for (int x = 0; x < temperaturaAtual.length; x++) {
+					
+					System.out.println("");
+					System.out.printf(temperaturaAtual[x] + " °Fahrenheit é igual a %.1f", temperaturaTransformada[x]);
+					System.out.print(" °Kelvin\n");
+				}
+				
+				System.out.printf("\nA média das temperaturas digitadas é %.1f",media);
+				System.out.printf("\n\nA média das temperaturas transformadas é %.1f ",mediaTransformada);
+				break;
+				
+
+			// Transformar Celsius em Fahrenheit
+			case 5:
+				for (int x = 0; x < quantidade; x++) {
+
+					System.out.print("\nDigite a " + (x + 1) + "ª temperatura: ");
+					temperaturaAtual[x] = leia.nextDouble();
+					somaMedia += temperaturaAtual[x];
+
+				}
+				media = somaMedia / temperaturaAtual.length;
+				for (int x = 0; x < temperaturaAtual.length; x++) {
+					temperaturaTransformada[x] = (1.8 * temperaturaAtual[x] +32);
+					
+						somaMediaTransformada += temperaturaTransformada[x];
+
+				}
+				
+				mediaTransformada = somaMediaTransformada/temperaturaTransformada.length;
+				for (int x = 0; x < temperaturaAtual.length; x++) {
+					
+					System.out.println("");
+					System.out.printf(temperaturaAtual[x] + " °Fahrenheit é igual a %.1f", temperaturaTransformada[x]);
+					System.out.print(" °Kelvin\n");
+				}
+				
+				System.out.printf("\nA média das temperaturas digitadas é %.1f",media);
+				System.out.printf("\n\nA média das temperaturas transformadas é %.1f ",mediaTransformada);
+				break;
+				
+				
+			// Transformar Celsius em Kelvin
+			case 6:
+				for (int x = 0; x < quantidade; x++) {
+
+					System.out.print("\nDigite a " + (x + 1) + "ª temperatura: ");
+					temperaturaAtual[x] = leia.nextDouble();
+					somaMedia += temperaturaAtual[x];
+
+				}
+				media = somaMedia / temperaturaAtual.length;
+				for (int x = 0; x < temperaturaAtual.length; x++) {
+					temperaturaTransformada[x] = (temperaturaAtual[x] + 273);
+					
+						somaMediaTransformada += temperaturaTransformada[x];
+
+				}
+				
+				mediaTransformada = somaMediaTransformada/temperaturaTransformada.length;
+				for (int x = 0; x < temperaturaAtual.length; x++) {
+					
+					System.out.println("");
+					System.out.printf(temperaturaAtual[x] + " °Fahrenheit é igual a %.1f", temperaturaTransformada[x]);
+					System.out.print(" °Kelvin\n");
+				}
+				
+				System.out.printf("\nA média das temperaturas digitadas é %.1f",media);
+				System.out.printf("\n\nA média das temperaturas transformadas é %.1f ",mediaTransformada);
+				break;
+
+			default:
+				System.out.println("O número escolhido é inválido! Digite um número entre 1 a 6.");
+			}
+
+		} while (temperatura != 1 && temperatura != 2 && temperatura != 3 && temperatura != 4 && temperatura != 5
+				&& temperatura != 6);
+
+
+
+		leia.close();
+	}
+
+}
